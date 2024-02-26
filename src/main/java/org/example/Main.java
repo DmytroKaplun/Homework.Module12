@@ -84,10 +84,9 @@ public class Main {
         });
         threads.add(threadD);
 
-        threadA.start();
-        threadB.start();
-        threadC.start();
-        threadD.start();
+        for (Thread thread : threads) {
+            thread.start();
+        }
 
         for (Thread thread : threads) {
             thread.join();
